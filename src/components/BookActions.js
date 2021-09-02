@@ -5,27 +5,27 @@ import { removeBook } from '../redux/books/books';
 
 const BookActions = (props) => {
   const dispatch = useDispatch();
+  const { bookid } = props;
 
-  const removeBookFromStore = (e) => {
-    dispatch(removeBook(e.target.id));
+  const removeBookFromStore = () => {
+    dispatch(removeBook(bookid));
   };
 
-  const { actionid } = props;
   return (
     <div>
       <button type="button">Comments</button>
-      <button type="button" id={actionid} onClick={removeBookFromStore}>Remove</button>
+      <button type="button" onClick={removeBookFromStore}>Remove</button>
       <button type="button">Edit</button>
     </div>
   );
 };
 
 BookActions.defaultProps = {
-  actionid: '',
+  bookid: '',
 };
 
 BookActions.propTypes = {
-  actionid: PropTypes.string,
+  bookid: PropTypes.string,
 };
 
 export default BookActions;

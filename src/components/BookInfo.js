@@ -4,7 +4,7 @@ import BookActions from './BookActions';
 
 const BookInfo = (props) => {
   const {
-    id,
+    bookid,
     categorie,
     title,
     author,
@@ -15,20 +15,20 @@ const BookInfo = (props) => {
       <span>{categorie}</span>
       <span>{title}</span>
       <span>{author}</span>
-      <BookActions actionid={id} />
+      <BookActions bookid={bookid} />
     </div>
   );
 };
 
 BookInfo.defaultProps = {
-  id: '',
+  bookid: '',
   categorie: '',
   title: '',
   author: '',
 };
 
 BookInfo.propTypes = {
-  id: PropTypes.string,
+  bookid: PropTypes.string,
   categorie: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,

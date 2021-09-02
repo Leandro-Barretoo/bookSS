@@ -7,6 +7,7 @@ const AddForm = () => {
   const dispatch = useDispatch();
 
   const submitBookToStore = () => {
+    const form = document.getElementById('form');
     const newBook = {
       id: uuidv4(),
       categorie: document.getElementById('categories-input').value,
@@ -14,12 +15,13 @@ const AddForm = () => {
       author: 'unknown',
     };
     dispatch(addBook(newBook));
+    form.reset();
   };
 
   return (
     <div>
       <span>ADD NEW BOOK</span>
-      <form>
+      <form id="form">
         <input className="TextInput" />
         <select id="categories-input">
           <option value="action">Action</option>
