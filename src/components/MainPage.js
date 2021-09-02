@@ -5,9 +5,9 @@ import Line from './Line';
 import AddForm from './AddForm';
 import store from '../redux/cofigureStore';
 
-const { books } = store.getState();
+const { booksReducer } = store.getState();
 
-const myBooksArr = books.map((book) => {
+const myBooksArr = booksReducer.map((book) => {
   const {
     id,
     categorie,
