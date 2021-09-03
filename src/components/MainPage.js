@@ -9,22 +9,19 @@ const MainPage = () => {
   const myBooks = useSelector((state) => state.booksReducer);
 
   const myBooksArr = myBooks.map((book) => {
-    const {
-      id,
-      categorie,
-      title,
-      author,
-    } = book;
+    const id = book[0];
+    const { category, title } = book[1][0];
     return (
       <BookCard
         key={id}
         bookid={id}
-        categorie={categorie}
+        category={category}
         title={title}
-        author={author}
+        author="unknown"
       />
     );
   });
+  window.books = myBooksArr;
 
   return (
     <div className="Panel-bg">

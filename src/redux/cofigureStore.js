@@ -9,7 +9,12 @@ const rootReducer = combineReducers({
 const fetchBooks = () => (dispatch) => {
   fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ym9eiorepf3iLhrJ7Q7F/books')
     .then((response) => {
-      dispatch(addBook(response.json()));
+      response.json().then((data) => {
+        const books = Object.entries(data);
+        books.forEach((book) => {
+          dispatch(addBook(book));
+        });
+      });
     });
 };
 
@@ -20,6 +25,8 @@ const store = createStore(
 
 store.subscribe(() => { console.log(store.getState()); });
 store.dispatch(fetchBooks());
+
+window.store = store;
 
 export default store;
 

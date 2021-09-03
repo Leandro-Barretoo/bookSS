@@ -1,20 +1,31 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
 
 const AddForm = () => {
   const dispatch = useDispatch();
-
   const submitBookToStore = () => {
     const form = document.getElementById('form');
+
     const newBook = {
-      id: uuidv4(),
-      categorie: document.getElementById('categories-input').value,
+      item_id: uuidv4(),
+      category: document.getElementById('categories-input').value,
       title: document.getElementsByClassName('TextInput')[0].value,
       author: 'unknown',
     };
-    dispatch(addBook(newBook));
+
+    const fetchBooks = () => () => {
+      fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ym9eiorepf3iLhrJ7Q7F/books', {
+        method: 'POST',
+        body: JSON.stringify(newBook),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json());
+    };
+
+    dispatch(fetchBooks());
     form.reset();
   };
 
