@@ -1,13 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
 const BookActions = (props) => {
   const dispatch = useDispatch();
   const { bookid } = props;
 
   const removeBookFromStore = () => {
-    const deleteBooks = () => () => {
+    const deleteBooks = () => (dispatch) => {
+      dispatch(removeBook(bookid));
       fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ym9eiorepf3iLhrJ7Q7F/books/${bookid}`, {
         method: 'DELETE',
         body: JSON.stringify({ item_id: `${bookid}` }),

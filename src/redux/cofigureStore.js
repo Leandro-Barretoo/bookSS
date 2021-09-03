@@ -23,11 +23,6 @@ const store = createStore(
   applyMiddleware(thunk),
 );
 
-store.subscribe(() => { console.log(store.getState()); });
 store.dispatch(fetchBooks());
 
-window.store = store;
-
 export default store;
-
-// app id: ym9eiorepf3iLhrJ7Q7F

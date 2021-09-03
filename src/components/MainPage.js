@@ -21,7 +21,6 @@ const MainPage = () => {
       />
     );
   });
-  window.books = myBooksArr;
 
   return (
     <div className="Panel-bg">
