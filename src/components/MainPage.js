@@ -26,9 +26,9 @@ const MainPage = () => {
   return (
     <div className="Panel-bg">
       <Nav />
-      <Line />
+      <Line name="Line" />
       { myBooksArr }
-      <Line />
+      <Line name="Line-2" />
       <AddForm />
     </div>
   );
