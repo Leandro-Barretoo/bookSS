@@ -28,13 +28,13 @@
 
 .Percentage {
   display: block;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   font-size: 2rem;
 }
 
 .Comp {
   display: block;
-  font-family: Montserrat;
+  font-family: Montserrat, serif;
   opacity: 0.5;
   font-size: 0.875rem;
 }
