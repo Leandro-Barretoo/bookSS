@@ -7,8 +7,8 @@ const Completed = () => (
       <div className="Oval-2" />
     </div>
     <div className="Percentage-Comp">
-      <span className="Percentage">64%</span>
-      <span className="Comp">Completed</span>
+      <span className="Percentage Display-Block Family-Montserrat">64%</span>
+      <span className="Comp Display-Block Family-Montserrat">Completed</span>
     </div>
   </div>
 );

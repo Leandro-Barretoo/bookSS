@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
+.Display-Block {
+  display: block;
+}
+
+.Family-Montserrat {
+  font-family: Montserrat, serif;
+}
+
 .Comp-Container {
   flex: 1;
   display: flex;
@@ -27,14 +35,10 @@
 }
 
 .Percentage {
-  display: block;
-  font-family: Montserrat, serif;
   font-size: 2rem;
 }
 
 .Comp {
-  display: block;
-  font-family: Montserrat, serif;
   opacity: 0.5;
   font-size: 0.875rem;
 }

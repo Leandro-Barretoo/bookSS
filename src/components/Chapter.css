@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600&display=swap');
 
+.Family-Roboto {
+  font-family: 'Roboto Slab', serif;
+}
+
 .Chapter-Container {
   flex: 1;
   display: flex;
@@ -9,7 +13,6 @@
 
 .Curr-Title {
   opacity: 0.5;
-  font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: 300;
   color: #121212;
@@ -18,7 +21,6 @@
 
 .Curr-Chap {
   padding: 5px 0;
-  font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: -0.4px;
@@ -33,7 +35,6 @@
 }
 
 .Update {
-  font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: 300;
   letter-spacing: 0.5px;

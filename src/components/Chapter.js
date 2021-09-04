@@ -3,10 +3,10 @@ import './Chapter.css';
 
 const Chapter = () => (
   <div className="Chapter-Container">
-    <span className="Curr-Title">CURRENT CHAPTER</span>
-    <span className="Curr-Chap">Chapter 17</span>
+    <span className="Curr-Title Family-Roboto">CURRENT CHAPTER</span>
+    <span className="Curr-Chap Family-Roboto">Chapter 17</span>
     <div className="Blue-square">
-      <span className="Update">UPDATE PROGRESS</span>
+      <span className="Update Family-Roboto">UPDATE PROGRESS</span>
     </div>
   </div>
 );

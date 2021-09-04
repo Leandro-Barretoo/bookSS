@@ -5,8 +5,15 @@
   flex: 3;
 }
 
-.Cat-Info {
+.Display-Block {
   display: block;
+}
+
+.Family-Roboto {
+  font-family: 'Roboto Slab', serif;
+}
+
+.Cat-Info {
   font-family: Montserrat, serif;
   padding: 2.5px 10px;
   font-size: 0.975rem;
@@ -16,8 +23,6 @@
 }
 
 .Tit-Info {
-  display: block;
-  font-family: 'Roboto Slab', serif;
   padding: 2.5px 10px;
   font-size: 1.375rem;
   font-weight: bold;
@@ -26,8 +31,6 @@
 }
 
 .Auth-Info {
-  display: block;
-  font-family: 'Roboto Slab', serif;
   padding: 2.5px 10px;
   font-size: 0.875rem;
   font-weight: 300;

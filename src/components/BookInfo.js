@@ -13,9 +13,9 @@ const BookInfo = (props) => {
 
   return (
     <div className="Info-Box">
-      <span className="Cat-Info">{category}</span>
-      <span className="Tit-Info">{title}</span>
-      <span className="Auth-Info">{author}</span>
+      <span className="Cat-Info Display-Block">{category}</span>
+      <span className="Tit-Info Display-Block Family-Roboto">{title}</span>
+      <span className="Auth-Info Display-Block Family-Roboto">{author}</span>
       <BookActions bookid={bookid} />
     </div>
   );
